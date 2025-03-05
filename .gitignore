@@ -16,7 +16,10 @@ layer/*_layer_content.zip
 *.generated.tf
 
 # Config file.
-config.yaml
+# MPICLabs config file included in repo
+#config.yaml
+
+
 
 # Deployment ID
 deployment.id
