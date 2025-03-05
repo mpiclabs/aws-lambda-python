@@ -1,0 +1,28 @@
+# A list of perspectives with the format <RIR>.<AWS-Region> TODO link to pages.
+perspectives:
+  - ap-northeast-2
+  - ap-southeast-1
+  - ap-southeast-2
+  - ca-central-1
+  - eu-central-1
+  - eu-west-1
+  - eu-west-3
+  - us-east-2
+
+# The AWS region name for the API gateway and controller.
+api-region: us-east-2
+
+# The default number of perspectives to use.
+default-perspective-count: 8
+
+# Path to source code for the functions
+source-path: /src/aws_lambda_mpic
+
+caa-domains:
+  - example-ca.example.com
+
+# absolute maximum regardless of orchestration parameters in request
+# NOT to be interpreted as the default number of attempts (default is 1 unless explicitly set in request)
+absolute-max-attempts: 3
+
+log-level: INFO
