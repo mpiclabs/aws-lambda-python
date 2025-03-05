@@ -13,7 +13,7 @@ All requirements for running the API are packaged and uploaded to AWS as a lambd
 - Hatch (https://hatch.pypa.io/) for building and running the project. This is a Python project manager that can be installed via `pip install hatch`.
 
 ## Deployment Steps
-1. Create `config.yaml` in the root directory of the repo to contain the proper values needed for the deployment. A default config.yaml for a 6-perspective deployment with the controller in us-east-2 is included in this repo as `config.example.yaml`. This config can be made the active config by running `cp config.example.yaml config.yaml` in the root directory.
+1. MPICLabs has alread created an optimal 8-perspective config in config.yaml. Simply change the default CAA domains.
 2. Create a virtual Python environment in the `layer` directory and install the project dependencies via pip. This can be executed by running `hatch run lambda:layer-install`.
 3. Package two AWS layers by executing `package-layer.sh`. This will make two files: `python3_layer_content.zip` and `mpic_coordinator_layer_content.zip` which will later be referenced by Open Tofu. This can be done by running `./package-layer.sh` or `hatch run lambda:layer-package`.
 4. Run `configure.py` from the root directory of the repo to generate Open Tofu files from templates. This can be separately executed by running `hatch run ./configure.py` or `hatch run lambda:configure-tf`.
